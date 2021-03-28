@@ -1,0 +1,9 @@
+package com.shoppingcart.registeruser.registeruserservice.service;
+
+import com.shoppingcart.commonobjects.model.Customer;
+
+public interface CustomerService {
+
+	Customer save(Customer save);
+    
+}

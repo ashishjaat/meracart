@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="com.meracart.omnichannel.service.OrderService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="com.meracart.omnichannel.repository.OrderRepository"/>
+    <fullyQualifiedTypeName name="com.meracart.omnichannel.model.Order"/>
+    <fullyQualifiedTypeName name="com.meracart.omnichannel.model.Product"/>
+    <fullyQualifiedTypeName name="com.meracart.omnichannel.repository.ProductRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+</qualifiedTypeNameHistroy>

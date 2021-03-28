@@ -1,0 +1,20 @@
+package com.meracart.omnichannel.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shoppingcart.commonobjects.model.Customer;
+import com.shoppingcart.registeruser.registeruserservice.repository.CustomerRepository;
+
+@Service
+public class OrderServiceImpl implements OrderService{
+	
+	@Autowired
+	CustomerRepository customerRepository;
+	
+	@Override
+    public Customer save(Customer customer) {
+        return customerRepository.save(customer);
+    }
+
+}
