@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\dev\apps\meracart\servicediscovery"/>
 			<item value="C:\dev\apps\meracart\orderservice"/>
 			<item value="C:\dev\apps\meracart\productservice"/>
 			<item value="C:\dev\apps\meracart\mesh-gateway"/>
