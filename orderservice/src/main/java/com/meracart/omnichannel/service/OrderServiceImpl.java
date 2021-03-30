@@ -3,7 +3,7 @@ package com.meracart.omnichannel.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.meracart.omnichannel.model.Order;
+import com.meracart.commonobjects.model.Order;
 import com.meracart.omnichannel.repository.OrderRepository;
 
 @Service

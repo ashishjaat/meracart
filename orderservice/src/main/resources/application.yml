@@ -1,3 +1,5 @@
+server:
+  port: 8190
 spring: 
   application:
     name: ORDER-SERVICE
@@ -12,3 +14,63 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost 
+
+resilience4j.circuitbreaker:
+    configs:
+      default:
+        minimum-number-of-calls: 5
+        ring-buffer-size-in-closed-state: 5
+        ring-buffer-size-in-half-open-state: 3
+        register-health-indicator: true 
+        allow-health-indicator-to-fail: true
+        permitted-number-of-calls-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
+        wait-duration-in-open-state: 5s
+        failure-rate-threshold: 50
+        sliding-window-size: 10
+        event-consumer-buffer-size: 10
+        record-exceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+    instances:
+      orderservice-handler: 
+        base-config: default
+        
+resilience4j.retry: 
+    configs:
+      default:
+        wait-duration: 300
+        max-attempts: 2
+        event-consumer-buffer-size: 200
+        enable-exponential-backoff: false
+        exponential-backoff-multiplier: 2
+        enable-randomized-wait: false
+        randomized-wait-factor: 2
+        
+resilience4j.timelimiter:  
+    configs:
+      default:
+        timeout-duration: 10s
+    instances:
+        orderservice-handler:
+            base-config: default 
+        
+resilience4j.bulkhead:
+    configs:
+      default:
+        max-concurrent-calls: 20
+
+resilience4j.thread-pool-bulkhead:  
+    configs:
+      default:
+        max-thread-pool-size: 16
+        core-thread-pool-size: 8
+        queue-capacity: 4
+
+      
+        
+      
+        
+      
+        

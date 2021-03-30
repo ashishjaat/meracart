@@ -1,6 +1,6 @@
 package com.meracart.omnichannel.service;
 
-import com.meracart.omnichannel.model.Product;
+import com.meracart.commonobjects.model.Product;
 
 public interface ProductService {
 

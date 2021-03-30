@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.meracart.omnichannel.model.Product;
+import com.meracart.commonobjects.model.Product;
 import com.meracart.omnichannel.service.ProductService;
 
 @RestController

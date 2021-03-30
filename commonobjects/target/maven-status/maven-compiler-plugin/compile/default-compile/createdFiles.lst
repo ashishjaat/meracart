@@ -1,0 +1,4 @@
+com\meracart\commonobjects\commonobjects\App.class
+com\meracart\commonobjects\model\Order.class
+com\meracart\commonobjects\model\Product.class
+com\meracart\commonobjects\model\Customer.class
