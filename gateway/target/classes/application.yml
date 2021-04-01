@@ -1,0 +1,41 @@
+server:
+  port: 8088
+spring: 
+  application:
+    name: GATEWAY-SERVICE
+  security:
+    oauth2:
+      client:
+        registration:
+          meracart-cloud-gateway-client:
+            provider: keycloak
+            client-id: meracart-cloud-gateway-client
+            client-secret: 7c58cf70-f8fe-420f-b87e-aebfd7b4ce39           
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/meracart-cloud-gateway-client
+            scope: openid           
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8180/auth/realms/meracart-realm            
+  cloud:    
+    gateway:
+      default-filters:
+      - TokenRelay   
+      routes:
+      - id: order-service
+        uri: lb://ORDER-SERVICE
+        predicates:
+        - Path=/orders/**
+      - id: product-service
+        uri: lb://PRODUCT-SERVICE
+        predicates:
+        - Path=/products/**
+       
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost

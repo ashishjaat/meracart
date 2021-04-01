@@ -19,7 +19,7 @@ public class OrderController {
 	RestTemplate restTemplate;
 	
 	@PostMapping("/orders")
-	public com.meracart.commonobjects.model.Order bookOrder(@RequestBody Order order) {
+	public Order bookOrder(@RequestBody Order order) {
 		
 		restTemplate.postForObject(null, order, null);
 		return orderService.save(order);

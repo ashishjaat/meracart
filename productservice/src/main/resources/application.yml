@@ -3,6 +3,11 @@ server:
 spring: 
   application:
     name: PRODUCT-SERVICE
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/auth/realms/meracart-realm
   data:
     mongodb:
       uri: mongodb://localhost:27017/meracartproducts_db
