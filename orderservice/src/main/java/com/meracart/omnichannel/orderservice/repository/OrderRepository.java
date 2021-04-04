@@ -1,4 +1,4 @@
-package com.meracart.omnichannel.repository;
+package com.meracart.omnichannel.orderservice.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

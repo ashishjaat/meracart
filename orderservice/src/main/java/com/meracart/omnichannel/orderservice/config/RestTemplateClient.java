@@ -1,4 +1,4 @@
-package com.holidu.interview.assignment.configuration;
+package com.meracart.omnichannel.orderservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

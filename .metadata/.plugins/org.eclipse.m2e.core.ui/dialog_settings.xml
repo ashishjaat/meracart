@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\dev\apps\meracart\gateway"/>
 			<item value="C:\dev\apps\meracart\apigateway"/>
 			<item value="C:\dev\apps\meracart\api-gateway"/>
 			<item value="C:\dev\apps\meracart\commonobjects"/>
