@@ -3,11 +3,7 @@ server:
 spring: 
   application:
     name: ORDER-SERVICE
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8180/auth/realms/meracart-realm
+
   data:
     mongodb:
       uri: mongodb://localhost:27017/meracartorders_db

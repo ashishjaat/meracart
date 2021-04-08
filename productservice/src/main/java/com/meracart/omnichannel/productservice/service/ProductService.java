@@ -1,4 +1,4 @@
-package com.meracart.omnichannel.service;
+package com.meracart.omnichannel.productservice.service;
 
 import com.meracart.commonobjects.model.Product;
 

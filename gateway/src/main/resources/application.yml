@@ -3,36 +3,25 @@ server:
 spring: 
   application:
     name: GATEWAY-SERVICE
-  security:
-    oauth2:
-      client:
-        registration:
-          meracart-cloud-gateway-client:
-            provider: keycloak
-            client-id: meracart-cloud-gateway-client
-            client-secret: 7c58cf70-f8fe-420f-b87e-aebfd7b4ce39           
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/meracart-cloud-gateway-client"                   
-        provider:
-          keycloak:
-            issuer-uri: http://localhost:8180/auth/realms/meracart-realm            
+             
   cloud:    
     gateway:
-      httpclient:
-        wiretap: true
-      httpserver:
-        wiretap: true
-      default-filters:
-      - TokenRelay   
+      discovery:
+        locator:
+          enabled: true
       routes:
       - id: order-service
         uri: lb://ORDER-SERVICE
         predicates:
-        - Path=/orders/**
+        - Path=/orders/**       
       - id: product-service
         uri: lb://PRODUCT-SERVICE
         predicates:
         - Path=/products/**
+      - id: user-service
+        uri: lb://USER-SERVICE
+        predicates:
+        - Path=/users/**
        
 eureka:
   client:

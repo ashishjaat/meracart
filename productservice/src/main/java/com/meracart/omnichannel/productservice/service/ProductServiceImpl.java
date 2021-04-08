@@ -1,10 +1,10 @@
-package com.meracart.omnichannel.service;
+package com.meracart.omnichannel.productservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.meracart.commonobjects.model.Product;
-import com.meracart.omnichannel.repository.ProductRepository;
+import com.meracart.omnichannel.productservice.repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService{
