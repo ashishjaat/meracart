@@ -12,46 +12,47 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
     
-    private String name;
+    private String product_name;
+    
+    private Double product_price;
+    
+    private String product_image;
+    
+    private String product_title;
+    
+    private String product_sizes;
 
-    private Double price;
-
-    private String pictureUrl;
-
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getProduct_name() {
+		return product_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
 	}
 
-	public Double getPrice() {
-		return price;
+	public Double getProduct_price() {
+		return product_price;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setProduct_price(Double product_price) {
+		this.product_price = product_price;
 	}
 
-	public String getPictureUrl() {
-		return pictureUrl;
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", product_name=" + product_name + ", product_price=" + product_price + "]";
 	}
-
-	public void setPictureUrl(String pictureUrl) {
-		this.pictureUrl = pictureUrl;
-	}
-
-    
-   
+	
+	
+	
 }

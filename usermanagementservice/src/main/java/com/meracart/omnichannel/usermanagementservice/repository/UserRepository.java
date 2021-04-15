@@ -7,4 +7,6 @@ import com.meracart.commonobjects.model.User;
 
 public interface UserRepository extends MongoRepository<User, Integer> {
 
+	User findByUserName(String username);
+
 }
